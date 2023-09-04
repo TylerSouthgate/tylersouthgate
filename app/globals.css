@@ -15,13 +15,31 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+ol,
+ul,
+div,
+span,
+small,
+table,
+i,
+b {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  font-weight: normal;
+}
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  .tile {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    overflow: hidden;
+  }
 }
