@@ -14,11 +14,6 @@ import HpSlider from "./components/atoms/hpSlider";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "tylersouthgate.com",
-  description: "My little website",
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -32,7 +27,11 @@ export default function RootLayout({
   const sliders = Array.from({
     length: (slideCount && slideCount) || 10,
   }).map((_, index) => {
-    return <HpSlider intNum={index} />;
+    return (
+      <div key={`${index}_slider`} className="flex-grow relative z-[10]">
+        <HpSlider intNum={index} />
+      </div>
+    );
   });
   useEffect(() => {
     setThemeColors(UseThemeColors(pageTheme));

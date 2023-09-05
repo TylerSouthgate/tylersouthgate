@@ -45,12 +45,10 @@ const HpSlider = ({ intNum }: IProps) => {
   };
 
   return (
-    <div
-      onMouseOver={moOver}
-      onMouseOut={moOut}
-      className="flex-grow relative z-[10]"
-    >
+    <>
       <div
+        onMouseOver={moOver}
+        onMouseOut={moOut}
         className="w-full ease-in-out duration-1000 rounded-b-full"
         style={{
           height: thisHeight + "px",
@@ -67,7 +65,7 @@ const HpSlider = ({ intNum }: IProps) => {
           height: hig + "px",
         }}
       />
-    </div>
+    </>
   );
 };
 export default HpSlider;

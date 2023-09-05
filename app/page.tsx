@@ -16,8 +16,8 @@ const Home = () => {
         <p className="pt-[150px]">
           Welcome to tylersouthgate.com, the home of.. well, me!
           <br />
-          Take some time and have a look around, not that there's much to see,
-          you understand!
+          Take some time and have a look around, not that there&#39;s much to
+          see, you understand!
         </p>
       </div>
     </>
