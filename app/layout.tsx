@@ -64,7 +64,9 @@ export default function RootLayout({
               </div>
             </div>
             <div className="flex justify-center">
-              <div className="w-1/2">{children}</div>
+              <div className="w-full md:w-5/6 lg:w-3/4 xl:w-1/2 mx-5">
+                {children}
+              </div>
             </div>
           </div>
         </PageDefContext.Provider>

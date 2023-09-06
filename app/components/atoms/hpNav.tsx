@@ -25,7 +25,7 @@ const HpNav = () => {
 
   return (
     <div
-      className="flex w-full relative z-[40]   border p-4 mt-4 rounded-lg shadow-xl mt-10"
+      className="flex w-full relative z-[40] border p-4 mt-10 rounded-lg shadow-xl mt-10"
       style={{ backdropFilter: "blur(10px)" }}
     >
       <div
