@@ -1,137 +1,33 @@
 const AboutContent = () => {
   return (
     <div className="relative z-[40] border p-4 mt-4 rounded-lg shadow-xl tile">
-      <p>AboutContent</p>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <p>
+        Born and brought up in the town of Ipswich, Suffolk in the UK on or
+        around the 1970's. TS managed to avoid all the normal things that people
+        did, like getting a job or a pension and instead pursued a life of nail
+        biting unpredictability. There where bands and guitars, a little too
+        much Wiliam Gibson at times, and way too many horses.
+      </p>
+      <p>
+        The years where packed with couch surfing, penny scrounging DJ'ing and
+        twenty foot mural painting. Somewhere along the way he learned how to
+        code and went with the flow all the way to India. He finally made his
+        way home, some twenty years later, and is now tending a Victorian house
+        in a small market town on the Norfolk borders with his loving wife and
+        irritating daughter (just kidding, she's lovely really!).
+      </p>
+      <h2>Likes?</h2>
+      <ul>
+        <li>Music</li>
+        <li>Cold Beer</li>
+        <li>Vape (but I used to hate it)</li>
+      </ul>
+      <h2>Not likes!</h2>
+      <ul>
+        <li>Chart (schitt) Music</li>
+        <li>Warm Beer</li>
+        <li>Smoking (but I used to love it)</li>
+      </ul>
     </div>
   );
 };

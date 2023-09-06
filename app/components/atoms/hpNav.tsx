@@ -46,7 +46,7 @@ const HpNav = () => {
           href={"/about"}
           className={pathname === "/about" ? active : inactive}
         >
-          <IdentificationIcon className="w-6 inline" /> about it
+          <IdentificationIcon className="w-6 inline" /> about
         </Link>
       </div>
       <div

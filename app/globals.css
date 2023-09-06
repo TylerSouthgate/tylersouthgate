@@ -32,14 +32,29 @@ i,
 b {
   margin: 0;
   padding: 0;
-  line-height: 1.2;
+  line-height: 1;
   font-weight: normal;
 }
 body {
   color: rgb(var(--foreground-rgb));
+
+  p {
+    padding: 0px 0px 20px 0px;
+    line-height: 1.5;
+  }
   .tile {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     overflow: hidden;
+    h2 {
+      font-size: 150%;
+    }
+    ul {
+      li {
+        list-style-type: circle;
+        list-style-position: inside;
+        margin: 10px 0px 10px 20px;
+      }
+    }
   }
 }
