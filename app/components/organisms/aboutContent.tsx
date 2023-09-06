@@ -16,10 +16,11 @@ const AboutContent = () => {
       <p>
         The years where packed with couch surfing, penny scrounging DJ&#39;ing
         and twenty foot mural painting. Somewhere along the way he learned how
-        to code and went with the flow all the way to India. He finally made his
-        way home, some twenty years later, and is now tending a Victorian house
-        in a small market town on the Norfolk borders with his loving wife and
-        irritating daughter (just kidding, she&#39;s lovely really!).
+        to code and went with the flow. A flow that went all the way to India.
+        He finally made his way home, some twenty years later, and is now
+        tending an old Victorian house in a small market town on the Norfolk
+        borders with his loving wife and irritating daughter (just kidding,
+        she&#39;s lovely really!).
       </p>
       <h2>Likes?</h2>
       <ul>
