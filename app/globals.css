@@ -52,8 +52,9 @@ body {
     ul {
       li {
         list-style-type: circle;
-        list-style-position: inside;
-        margin: 10px 0px 10px 20px;
+        list-style-position: outside;
+        margin: 10px 0px 10px 40px;
+        line-height: 1.5;
       }
     }
   }
