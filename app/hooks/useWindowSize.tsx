@@ -10,11 +10,16 @@ const UseWindowSize = () => {
       setWindowSize({
         width: window.innerWidth,
         height: window.innerHeight,
+        scrollTop: window.scrollY,
       });
     }
     window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleResize);
     handleResize();
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.addEventListener("scroll", handleResize);
+    };
   }, []);
   return windowSize;
 };

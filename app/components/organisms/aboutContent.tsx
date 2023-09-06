@@ -1,4 +1,14 @@
+import useWindowSize from "@/app/hooks/useWindowSize";
+import { useEffect, useState } from "react";
+
 const AboutContent = () => {
+  const [scrollTop, setScrollTop] = useState<number>(0);
+  const size = useWindowSize();
+
+  useEffect(() => {
+    setScrollTop(0.25 * size.scrollTop);
+  }, [size]);
+
   return (
     <div className="relative z-[40] border p-4 mt-4 rounded-lg shadow-xl tile">
       <p>
@@ -22,6 +32,17 @@ const AboutContent = () => {
         and is now tending an old Victorian house in a small market town on the
         Norfolk borders with his loving wife and daughter.
       </p>
+      <div
+        className="-ml-4 -mr-4 h-[100px] parallax-container shadow-xl mb-4"
+        style={{
+          backgroundImage: `url("/images/20230811_195050.jpg")`,
+          backgroundPosition: `center ${scrollTop}px`,
+        }}
+      >
+        <div className="blurBar">
+          <p>Shops</p>
+        </div>
+      </div>
 
       <div className="flex">
         <div className="flex-1">
