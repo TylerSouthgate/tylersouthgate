@@ -22,18 +22,45 @@ const AboutContent = () => {
         and is now tending an old Victorian house in a small market town on the
         Norfolk borders with his loving wife and daughter.
       </p>
-      <h2>Likes?</h2>
-      <ul>
-        <li>Music</li>
-        <li>Cold Beer</li>
-        <li>Vape (but I used to hate it)</li>
-      </ul>
-      <h2>Not likes!</h2>
-      <ul>
-        <li>Chart (schitt) Music</li>
-        <li>Warm Beer</li>
-        <li>Smoking (but I used to love it)</li>
-      </ul>
+
+      <div className="flex">
+        <div className="flex-1">
+          <h2>Likes?</h2>
+          <ul>
+            <li>Music</li>
+            <li>Cold Beer</li>
+            <li>Vape (but I used to hate it)</li>
+            <li>Guitars</li>
+            <li>Piña colada</li>
+            <li>Getting caught in the rain</li>
+            <li>A good, handmade pork pie</li>
+            <li>Comma&#39;s and long, drawn out sentences</li>
+            <li>Start Trek</li>
+            <li>Low budget SciFi/Horror movies</li>
+          </ul>
+        </div>
+        <div className="flex-1">
+          <h2>Not likes!</h2>
+          <ul>
+            <li>Chart (schitt) Music</li>
+            <li>Warm Beer</li>
+            <li>Smoking (but I used to love it)</li>
+            <li>
+              The fact that, in this day and age, when we have AI running
+              everything, self driving cars and all those other mircals of the
+              modern world, do we, as coders still rely on command line
+              interfaces for the most mission critical aspects of a project!
+              Someone please put a GUI on it! GRRRR!{" "}
+            </li>
+            <li>Barry Manalow</li>
+            <li>Start Trek - Deep Space 9</li>
+            <li>
+              Boy Bands, all of them! And Girl Bands, musn&#39;t leave out the
+              Girl Bands - Spice what now?
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
