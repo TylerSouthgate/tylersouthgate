@@ -37,9 +37,6 @@ b {
 }
 body {
   color: rgb(var(--foreground-rgb));
-  font-family: "mona-sana";
-  font-weight: 500;
-  font-style: normal;
   p {
     padding: 0px 0px 20px 0px;
     line-height: 1.5;

@@ -19,16 +19,16 @@ const monaSans = localFont({
       weight: "500",
       style: "normal",
     },
-    // {
-    //   path: "../../public/fonts/Grosa/Grosa-Medium.woff2",
-    //   weight: "600",
-    //   style: "normal",
-    // },
-    // {
-    //   path: "../../public/fonts/Grosa/Grosa-Bold.woff2",
-    //   weight: "700",
-    //   style: "normal",
-    // },
+    {
+      path: "../public/fonts/Mona Sans/TTF/Mona-Sans-Medium.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Mona Sans/TTF/Mona-Sans-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
   ],
   variable: "--font-mona-sans",
 });
@@ -60,8 +60,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${monaSans.variable} ease-in-out duration-500 relative z-0 relative`}
-        style={{ background: themeColors[1] }}
+        className={`${monaSans.variable} ease-in-out duration-500 relative z-0 relative font-mona-sans`}
+        style={{ background: themeColors[1], fontWeight: 700 }}
       >
         <PageDefContext.Provider
           value={{
@@ -73,8 +73,6 @@ export default function RootLayout({
             themeColors,
           }}
         >
-          <div className="curtain font-mona-sans">tyler southgate</div>
-          {/*
           <Banner />
           <div className="z-40">
             <div className=" z-[10]">
@@ -91,7 +89,6 @@ export default function RootLayout({
               </div>
             </div>
           </div>
-          */}
         </PageDefContext.Provider>
       </body>
     </html>

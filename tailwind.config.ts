@@ -7,9 +7,10 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
-    fontFamily: {
-      "mona-sans": "var(--font-mona-sans)",
+    extend: {
+      fontFamily: {
+        "mona-sans": "var(--font-mona-sans)",
+      },
     },
   },
   plugins: [],
