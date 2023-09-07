@@ -41,7 +41,7 @@ export default function RootLayout({
 }) {
   const size = useWindowSize();
   const [selectedSliderIndex, setSelectedSliderIndex] = useState<number>(-1);
-  const [pageTheme, setPageTheme] = useState<themeTypes>("RED");
+  const [pageTheme, setPageTheme] = useState<themeTypes>("GREEN");
   const slideCount: number = Math.floor(size.width / 15);
   const [themeColors, setThemeColors] = useState<Array<string>>(["", "", ""]);
   const sliders = Array.from({
@@ -73,6 +73,8 @@ export default function RootLayout({
             themeColors,
           }}
         >
+          <div className="curtain font-mona-sans">tyler southgate</div>
+          {/*
           <Banner />
           <div className="z-40">
             <div className=" z-[10]">
@@ -89,6 +91,7 @@ export default function RootLayout({
               </div>
             </div>
           </div>
+          */}
         </PageDefContext.Provider>
       </body>
     </html>
