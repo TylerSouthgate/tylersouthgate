@@ -33,21 +33,37 @@ b {
   margin: 0;
   padding: 0;
   line-height: 1;
-  font-weight: normal;
+  font-family: "__monaSans_38a3e1";
+  font-weight: 500;
+  font-size: 16px;
 }
 body {
-  color: rgb(var(--foreground-rgb));
-  font-family: "mona-sana";
-  font-weight: 500;
-  font-style: normal;
+  color: #333333;
   p {
     padding: 0px 0px 20px 0px;
     line-height: 1.5;
   }
+  h1 {
+    font-family: "__monaSansCondensed_1b3bc1";
+  }
+  .hp {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    & .inner_cont {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
   .tile {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    overflow: hidden;
+    overflow: visible;
     h2 {
       font-size: 150%;
     }

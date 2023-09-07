@@ -33,8 +33,8 @@ export const themes = [
     theme: "BLACK",
     config: [
       {
-        a: "#666666",
-        b: "#000000",
+        a: "#cccccc",
+        b: "#FFFFFF",
         c: "",
       },
     ],

@@ -1,17 +1,15 @@
 "use client";
 
-import "./globals.css";
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import PageDefContext from "./context/pageContext";
 import useWindowSize from "./hooks/useWindowSize";
 import { useEffect, useState } from "react";
-
 import UseThemeColors from "./hooks/useThemeColors";
 import { themeTypes } from "./types";
 import Banner from "./components/molecules/Banner";
 import HpSlider from "./components/atoms/hpSlider";
 import localFont from "next/font/local";
+
 const monaSans = localFont({
   src: [
     {
@@ -19,20 +17,42 @@ const monaSans = localFont({
       weight: "500",
       style: "normal",
     },
-    // {
-    //   path: "../../public/fonts/Grosa/Grosa-Medium.woff2",
-    //   weight: "600",
-    //   style: "normal",
-    // },
-    // {
-    //   path: "../../public/fonts/Grosa/Grosa-Bold.woff2",
-    //   weight: "700",
-    //   style: "normal",
-    // },
+    {
+      path: "../public/fonts/Mona Sans/TTF/Mona-Sans-Medium.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Mona Sans/TTF/Mona-Sans-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
   ],
   variable: "--font-mona-sans",
 });
-const inter = Inter({ subsets: ["latin"] });
+
+const monaSansCondensed = localFont({
+  src: [
+    {
+      path: "../public/fonts/Mona Sans/TTF/Mona-Sans-LightNarrow.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Mona Sans/TTF/Mona-Sans-MediumNarrow.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Mona Sans/TTF/Mona-Sans-BoldNarrow.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-mona-sans-condensed",
+});
+
+import "./globals.css";
 
 export default function RootLayout({
   children,
@@ -48,7 +68,7 @@ export default function RootLayout({
     length: (slideCount && slideCount) || 10,
   }).map((_, index) => {
     return (
-      <div key={`${index}_slider`} className="flex-grow relative z-[10]">
+      <div key={`${index}_slider`} className="flex-grow relative z-[5]">
         <HpSlider intNum={index} />
       </div>
     );
@@ -60,7 +80,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${monaSans.variable} ease-in-out duration-500 relative z-0 relative`}
+        className={`${monaSans.variable} ${monaSansCondensed.variable} ease-in-out duration-500 relative z-0 relative`}
         style={{ background: themeColors[1] }}
       >
         <PageDefContext.Provider
@@ -73,10 +93,8 @@ export default function RootLayout({
             themeColors,
           }}
         >
-          <div className="curtain font-mona-sans">tyler southgate</div>
-          {/*
           <Banner />
-          <div className="z-40">
+          <div className="z-5">
             <div className=" z-[10]">
               <div
                 className="flex fixed w-[99.9%] overflow-hidden"
@@ -85,13 +103,10 @@ export default function RootLayout({
                 {sliders}
               </div>
             </div>
-            <div className="flex justify-center">
-              <div className="w-full md:w-5/6 lg:w-3/4 xl:w-1/2 mx-5">
-                {children}
-              </div>
+            <div className="flex justify-center z-[20]">
+              <div className="w-full">{children}</div>
             </div>
           </div>
-          */}
         </PageDefContext.Provider>
       </body>
     </html>
