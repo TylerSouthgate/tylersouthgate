@@ -11,7 +11,27 @@ import UseThemeColors from "./hooks/useThemeColors";
 import { themeTypes } from "./types";
 import Banner from "./components/molecules/Banner";
 import HpSlider from "./components/atoms/hpSlider";
-
+import localFont from "next/font/local";
+const monaSans = localFont({
+  src: [
+    {
+      path: "../public/fonts/Mona Sans/TTF/Mona-Sans-Light.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    // {
+    //   path: "../../public/fonts/Grosa/Grosa-Medium.woff2",
+    //   weight: "600",
+    //   style: "normal",
+    // },
+    // {
+    //   path: "../../public/fonts/Grosa/Grosa-Bold.woff2",
+    //   weight: "700",
+    //   style: "normal",
+    // },
+  ],
+  variable: "--font-mona-sans",
+});
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -40,7 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} ease-in-out duration-500 relative z-0 relative`}
+        className={`${monaSans.variable} ease-in-out duration-500 relative z-0 relative`}
         style={{ background: themeColors[1] }}
       >
         <PageDefContext.Provider

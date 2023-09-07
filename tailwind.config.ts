@@ -6,7 +6,12 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {},
+  theme: {
+    extend: {},
+    fontFamily: {
+      "mona-sans": "var(--font-mona-sans)",
+    },
+  },
   plugins: [],
 };
 export default config;
