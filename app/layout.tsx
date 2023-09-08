@@ -61,7 +61,7 @@ export default function RootLayout({
 }) {
   const size = useWindowSize();
   const [selectedSliderIndex, setSelectedSliderIndex] = useState<number>(-1);
-  const [pageTheme, setPageTheme] = useState<themeTypes>("GREEN");
+  const [pageTheme, setPageTheme] = useState<themeTypes>("BLACK");
   const slideCount: number = Math.floor(size.width / 15);
   const [themeColors, setThemeColors] = useState<Array<string>>(["", "", ""]);
   const sliders = Array.from({
