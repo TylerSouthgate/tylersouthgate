@@ -4,6 +4,7 @@ const UseWindowSize = () => {
   const [windowSize, setWindowSize] = useState<any>({
     width: 0,
     height: 0,
+    scrollTop: 0,
   });
   useEffect(() => {
     function handleResize() {
