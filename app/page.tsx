@@ -3,26 +3,30 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Header from "./components/atoms/header";
 import useWindowSize from "./hooks/useWindowSize";
+import usePrevious from "./hooks/usePrevious";
 
 const Home = () => {
-  const [height, setHeight] = useState(0);
+  const [aboutTextHeight, setAboutTextHeight] = useState(0);
   const elementRef = useRef<HTMLDivElement>(null);
   const [scrollTop, setScrollTop] = useState<number>(0);
-  const [aboutTop, setAbouftTop] = useState<number>(500);
+  const [aboutTop, setAboutTop] = useState<number>(500);
   const size = useWindowSize();
   const [fixedTop, setFixedTop] = useState<boolean>(false);
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+
   useEffect(() => {
-    setScrollTop(size.height / 2 - 300 - 0.25 * size.scrollTop);
     if (size.scrollTop >= size.height) {
-      setFixedTop(true);
-      setAbouftTop(size.height / 2 - height / 2);
+      if (size.scrollTop >= size.height * 1.5 - aboutTextHeight) {
+      } else {
+        setFixedTop(true);
+        setAboutTop(size.height / 2 - aboutTextHeight / 2);
+      }
     } else if (size.scrollTop < size.height) {
       setFixedTop(false);
     }
+    setScrollTop(size.height / 2 - 300 - 0.25 * size.scrollTop);
   }, [size]);
   useLayoutEffect(() => {
-    setHeight(
+    setAboutTextHeight(
       (elementRef.current?.offsetHeight && elementRef.current?.offsetHeight) ||
         0
     );
@@ -62,6 +66,7 @@ const Home = () => {
             top: `${aboutTop}px`,
             color: fixedTop ? "#FFFFFF" : "#333333",
             transition: "color 1s",
+            overflow: "hidden",
           }}
         >
           <p>
@@ -90,17 +95,22 @@ const Home = () => {
         </div>
       </div>
       <div
-        className="-ml-4 -mr-4 h-[100px] parallax-container shadow-xl mb-4"
+        className=" h-[100px] parallax-container shadow-xl z-[150]"
         style={{
           backgroundImage: `url("/images/20230811_195050.jpg")`,
           backgroundPosition: `center ${scrollTop}px`,
         }}
       >
         <div className="blurBar">
-          <p>Shops</p>
+          <p>Some Shops</p>
         </div>
       </div>
-      <div className="h-[1000px]"></div>
+      <div
+        className="hp bg-white relative z-[140]"
+        style={{
+          overflow: "hidden",
+        }}
+      ></div>
     </>
   );
 };
