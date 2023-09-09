@@ -10,4 +10,5 @@ const UseThemeColors = (selected: themeTypes) => {
   });
   return result;
 };
+
 export default UseThemeColors;
