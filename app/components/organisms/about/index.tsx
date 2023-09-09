@@ -1,4 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react/jsx-key */
 
 import useWindowSize from "@/app/hooks/useWindowSize";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
