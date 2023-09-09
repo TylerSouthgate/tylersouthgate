@@ -62,7 +62,7 @@ export default function RootLayout({
   const size = useWindowSize();
   const [selectedSliderIndex, setSelectedSliderIndex] = useState<number>(-1);
   const [pageTheme, setPageTheme] = useState<themeTypes>("BLACK");
-  const slideCount: number = Math.floor(size.width / 15);
+  const slideCount: number = Math.floor(size.width / 100);
   const [themeColors, setThemeColors] = useState<Array<string>>(["", "", ""]);
   const sliders = Array.from({
     length: (slideCount && slideCount) || 10,
@@ -80,7 +80,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${monaSans.variable} ${monaSansCondensed.variable} ease-in-out duration-500 relative z-0 relative`}
+        className={`${monaSans.variable} ${monaSansCondensed.variable} z-0 relative`}
         style={{ background: themeColors[1] }}
       >
         <PageDefContext.Provider
@@ -97,7 +97,7 @@ export default function RootLayout({
           <div className="z-5">
             <div className=" z-[10]">
               <div
-                className="flex fixed w-[99.9%] overflow-hidden"
+                className="flex fixed w-[99.9%] overflow-hidden ease-in-out duration-500 "
                 style={{ height: size.height - 30 + "px" }}
               >
                 {sliders}
