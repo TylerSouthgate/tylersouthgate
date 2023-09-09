@@ -9,9 +9,11 @@ interface IProps {
 const ImageBanner = ({ image, tagLine }: IProps) => {
   const [scrollTop, setScrollTop] = useState<number>(0);
   const dimentions = useWindowSize();
+
   useEffect(() => {
     setScrollTop(dimentions.height / 2 - 300 - 0.25 * dimentions.scrollTop);
   }, [dimentions]);
+
   return (
     <div
       className=" h-[100px] parallax-container shadow-xl z-[150]"

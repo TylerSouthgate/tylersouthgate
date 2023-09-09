@@ -4,9 +4,11 @@ import useWindowSize from "@/app/hooks/useWindowSize";
 const Intro = () => {
   const [scrollTop, setScrollTop] = useState<number>(0);
   const dimentions = useWindowSize();
+
   useEffect(() => {
     setScrollTop(dimentions.height / 2 - 300 - 0.25 * dimentions.scrollTop);
   }, [dimentions]);
+
   return (
     <div className="hp relative z-[30]">
       <div className="inner_cont">

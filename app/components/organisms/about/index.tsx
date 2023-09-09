@@ -12,7 +12,6 @@ const About = () => {
   const [aboutTextHeight, setAboutTextHeight] = useState<number>(0);
   const [fixedTop, setFixedTop] = useState<boolean>(false);
   const [aboutTop, setAboutTop] = useState<number>(500);
-
   const ranTezxt = Array.from({
     length: 100,
   }).map((_, index) => {
