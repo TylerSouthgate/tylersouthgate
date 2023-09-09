@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import { useContext, useEffect, useState } from "react";
 import useWindowSize from "@/app/hooks/useWindowSize";
 import PageDefContext from "@/app/context/pageContext";

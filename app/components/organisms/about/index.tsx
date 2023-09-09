@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import useWindowSize from "@/app/hooks/useWindowSize";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Content from "./content";
@@ -13,7 +15,6 @@ const About = () => {
   const ranTezxt = Array.from({
     length: 100,
   }).map((_, index) => {
-    console.log("THINGS!! ");
     return <RandomText testString={"?"} />;
   });
 
