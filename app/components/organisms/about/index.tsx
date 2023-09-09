@@ -39,9 +39,10 @@ const About = () => {
 
   return (
     <div
-      className="hp relative bg-black z-[70]"
+      className="hp relative bg-[#283644] z-[70]"
       style={{
         overflow: "hidden",
+        boxShadow: "0px 0px 58px -1px rgba(0, 0, 0, 1)",
       }}
     >
       {ranTezxt}
@@ -51,7 +52,7 @@ const About = () => {
         style={{
           position: fixedTop ? "fixed" : "unset",
           top: `${aboutTop}px`,
-          color: fixedTop ? "#FFFFFF" : "#333333",
+          color: fixedTop ? "#FFFFFF" : "#506D88",
           transition: "color 1s",
           overflow: "hidden",
         }}

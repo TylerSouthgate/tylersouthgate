@@ -19,7 +19,7 @@ const RandomText = ({ testString }: IProps) => {
     if (Number(dimentions.width) > 0 && startLeft === 0) {
       setStartPos(Math.floor(Math.random() * 500));
       setStartSize(Math.floor(Math.random() * 400 + 25));
-      setStartLeft(Math.floor(Math.random() * Number(dimentions.width)));
+      setStartLeft(Math.floor(Math.random() * 95)); // Number(dimentions.width)
       setSpeed(Math.random() * 1);
     }
   }, [dimentions]);
@@ -35,7 +35,7 @@ const RandomText = ({ testString }: IProps) => {
       className="text-white text-xl absolute"
       style={{
         top: `${scrollTop}px`,
-        left: `${startLeft}px`,
+        left: `${startLeft}%`,
         fontSize: `${startSize}px`,
         opacity: speed - 0.02,
         filter: `blur(5px)`,
