@@ -128,4 +128,77 @@ body {
     align-items: center;
     justify-content: center;
   }
+  ul.cloud {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    line-height: 2.5rem;
+  }
+  ul.cloud p {
+    color: #a33;
+    display: block;
+    font-size: 1.5rem;
+    padding: 0.125rem 0.25rem;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    line-height: 0.75;
+  }
+  ul.cloud p[data-weight="1"] {
+    --size: 1;
+  }
+  ul.cloud p[data-weight="2"] {
+    --size: 2;
+  }
+  ul.cloud p[data-weight="3"] {
+    --size: 3;
+  }
+  ul.cloud p[data-weight="4"] {
+    --size: 4;
+  }
+  ul.cloud p[data-weight="5"] {
+    --size: 5;
+  }
+  ul.cloud p[data-weight="6"] {
+    --size: 6;
+  }
+  ul.cloud p[data-weight="7"] {
+    --size: 7;
+  }
+  ul.cloud p[data-weight="8"] {
+    --size: 8;
+  }
+  ul.cloud p[data-weight="9"] {
+    --size: 9;
+  }
+  ul.cloud p[data-weight="10"] {
+    --size: 10;
+  }
+  ul.cloud p[data-weight="11"] {
+    --size: 11;
+  }
+  ul.cloud p[data-weight="12"] {
+    --size: 12;
+  }
+  ul.cloud p[data-weight="13"] {
+    --size: 13;
+  }
+  ul.cloud p[data-weight="14"] {
+    --size: 14;
+  }
+  ul.cloud p[data-weight="15"] {
+    --size: 15;
+  }
+
+  ul.cloud p {
+    font-size: calc(var(--size) * 0.25rem + 0.5rem);
+    opacity: calc((15 - (9 - var(--size))) / 15);
+  }
+  ul.cloud p {
+    opacity: calc((15 - (9 - var(--size))) / 15);
+    /* ... */
+  }
 }
